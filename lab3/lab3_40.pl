@@ -4,7 +4,7 @@
 remove_duplicates([], []):-!.
 
 remove_duplicates([Head|Tail], Tail2):-
-    member(Head, Tail), remove_duplicates(Tail, Tail2), !.
+    member(Head, Tail), remove_duplicates(Tail, Tail2).
 
 remove_duplicates([Head|Tail], [Head|Tail2]):-
-    \+ member(Head, Tail), remove_duplicates(Tail,Tail2), !.
+    \+ member(Head, Tail), remove_duplicates(Tail,Tail2).

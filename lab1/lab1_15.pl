@@ -9,13 +9,7 @@ man(oleg).
 man(victor).
 man(pavel).
 
-% queries to identify names of fathers, mothers, grandmothers and
-% family members of families with mother, father and daughter.
-
-not(P) :- (call(P) -> fail ; true)
-
-% woman(X) :- not(man(X)).
-% woman(X) :- \+man(X).
+not(P) :- (call(P) -> fail ; true).
 
 fathers_names(X, Y) :- man(X), daughter(Y,X).
 
